@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assests/chronometer.png" type="image/icon type" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Stopwatch</title>
   </head>
   <body>
     <div class="watch-time-main">
-      <span id="time-hour">00</span>
+      <span id="time-hour" class="time-wrap">00</span>
       <span>:</span>
-      <span id="time-min">00</span>
+      <span id="time-min" class="time-wrap">00</span>
       <span>:</span>
-      <span id="time-sec">00</span>
-      <span></span>
+      <span id="time-sec" class="time-wrap">00</span>
+      <div class="milisec-wrap time-wrap">
+        <p>.<span id="time-milisec">00</span></p>
+      </div>
     </div>
     <div id="watch-controls">
       <button id="start-btn" onclick="startWatch()">Start</button>
-      <button id="stop-btn" onclick="stopWatch()">Stop</button>
-      <button id="reset-btn" onclick="resetWatch()">Reset</button>
+      <button id="stop-btn" class="d-none" onclick="stopWatch()">Stop</button>
+      <button id="reset-btn" class="d-none" onclick="resetWatch()">
+        Reset
+      </button>
     </div>
     <script src="./main.js" defer></script>
   </body>
